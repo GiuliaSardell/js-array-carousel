@@ -8,31 +8,6 @@
 
 */
 
-
-// immagini laterali*************************************
-
-const minibox = document.getElementsByClassName('minibox')
-console.log(minibox)
-
-const box = document.getElementsByClassName('box');
-console.log(box)
-
-
-let contatore = 0
-console.log(minibox[contatore])
-
-const prev = document.querySelector('.prev')
-const next = document.querySelector('.next')
-
-
-
-
-
-
-
-
-
-// const text = document.querySelector('.text')
 const images = [
   'img/01.jpg',
   'img/02.jpg',
@@ -58,11 +33,58 @@ const text = [
 ]
 
 
+const minibox = document.getElementsByClassName('minibox')
+console.log(minibox)
+
+const box = document.getElementsByClassName('box');
+console.log(box)
+
+
+let contatore = 0
+console.log(minibox[contatore])
+
+const prev = document.querySelector('.prev')
+const next = document.querySelector('.next')
+
+
+
+
+const slide = document.querySelector('.slide');
+const minislide = document.querySelector('.minislide');
+
+
+for(let i = 0; i < images.length; i++){
+
+  console.log(images[i]);
+  
+  const box = document.createElement('div');
+  const minibox = document.createElement('div');
+  console.log(box)
+  console.log(minibox)
+
+  box.className = 'box';
+  minibox.className = 'minibox';
+
+  if(i === 0){
+    box.classList.add('active');
+    minibox.classList.add('miniactive');
+  }
+
+  box.innerHTML = `<img src="${images[i]}" alt="">`;
+  minibox.innerHTML = `<img src="${images[i]}" alt="">`;
+
+  console.log(box);
+
+  slide.append(box);
+  minislide.append(minibox);
+
+}
 
 
 
 
 prev.addEventListener('click', function(){
+
 
   minibox[contatore].classList.remove('miniactive');
   box[contatore].classList.remove('active')
@@ -93,7 +115,6 @@ next.addEventListener('click', function(){
   minibox[contatore].classList.add('miniactive');
   box[contatore].classList.add('active')
 
-  console.log(contatore)
 })
 
 
