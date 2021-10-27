@@ -53,7 +53,7 @@ const slide = document.querySelector('.slide');
 const minislide = document.querySelector('.minislide');
 
 
-for(let i = 0; i < images.length; i++){
+for(let i = 0; i < images.length ; i++){
 
   console.log(images[i]);
   
@@ -65,21 +65,35 @@ for(let i = 0; i < images.length; i++){
   box.className = 'box';
   minibox.className = 'minibox';
 
-  if(i === 0){
-    box.classList.add('active');
-    minibox.classList.add('miniactive');
-  }
-
   box.innerHTML = `<img src="${images[i]}" alt="">`;
   minibox.innerHTML = `<img src="${images[i]}" alt="">`;
 
   console.log(box);
 
-  slide.append(box);
+  slide.append(box); 
+  
   minislide.append(minibox);
+  
+  if(i === contatore){
+    box.classList.add('active');
+    minibox.classList.add('miniactive');
+  }
 
 }
 
+
+// for (i=0; i< images.length; i++){
+
+//   const testo = document.createElement('div');
+
+//   testo.className = 'testo'
+
+//   testo.innerHTML= `<h2> ${title[i]} </h2> <tr> 
+//   <p> ${text[i]} </p>`
+
+//   box[i].append(testo)
+
+// }
 
 
 
@@ -122,11 +136,11 @@ for (i=0; i< title.length; i++){
 
   const testo = document.createElement('div');
 
-    testo.className = 'testo'
+  testo.className = 'testo'
 
-    testo.innerHTML= `<h2> ${title[i]} </h2> <tr> 
-    <p> ${text[i]} </p>`
+  testo.innerHTML= `<h2> ${title[i]} </h2> <tr> 
+  <p> ${text[i]} </p>`
 
-    box[i].append(testo)
+  box[i].append(testo)
 
 }
