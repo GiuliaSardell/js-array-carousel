@@ -31,6 +31,7 @@
 
 .active{
   display: block;
+  position: relative;
 }
 
 
@@ -77,4 +78,13 @@
 
 .next{
   bottom: 0;
+}
+
+.testo{
+  text-align: end;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+
 }

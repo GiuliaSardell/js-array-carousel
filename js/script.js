@@ -26,6 +26,60 @@ const next = document.querySelector('.next')
 
 
 
+
+
+
+
+
+
+// const text = document.querySelector('.text')
+const images = [
+  'img/01.jpg',
+  'img/02.jpg',
+  'img/03.jpg',
+  'img/04.jpg',
+  'img/05.jpg'
+];
+
+const title = [
+  'Svezia',
+  'Svizzera',
+  'Gran Bretagna',
+  'Germania',
+  'Paradise'
+]
+
+const text = [
+  'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
+  'Lorem ipsum',
+  'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+  'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+  'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+]
+
+// const testo = document.createElement('div');
+// console.log(testo)
+
+// testo.className = 'testo'
+
+// console.log(testo)
+
+// testo.innerHTML= '<h2>titolo</h2> <tr> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, accusamus.</p>'
+
+// console.log(testo)
+
+// const active = document.getElementsByClassName('active');
+
+// $('.active').append(testo)
+
+// console.log(active)
+
+
+
+
+
+
+
 prev.addEventListener('click', function(){
 
   minibox[contatore].classList.remove('miniactive');
@@ -41,7 +95,21 @@ prev.addEventListener('click', function(){
   minibox[contatore].classList.add('miniactive');
   box[contatore].classList.add('active');
 
+  const testo = document.createElement('div');
+  console.log(testo)
+
+  testo.className = 'testo'
+
+  console.log(testo)
+
+  testo.innerHTML= '<h2>titolo</h2> <tr> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, accusamus.</p>'
+
+  console.log(testo)
+
+  box[contatore].append(testo)
+
   console.log(contatore)
+
 })
 
 
@@ -66,13 +134,7 @@ next.addEventListener('click', function(){
 
 // immagini centrali***********************************
 
-// const images = [
-//   'img/01.jpg',
-//   'img/02.jpg',
-//   'img/03.jpg',
-//   'img/04.jpg',
-//   'img/05.jpg'
-// ];
+
 
 // console.log(images)
 // console.log(images[1])
@@ -103,18 +165,18 @@ next.addEventListener('click', function(){
 
 
 
-const title = [
-  'Svezia',
-  'Svizzera',
-  'Gran Bretagna',
-  'Germania',
-  'Paradise'
-]
+// const title = [
+//   'Svezia',
+//   'Svizzera',
+//   'Gran Bretagna',
+//   'Germania',
+//   'Paradise'
+// ]
 
-const text = [
-  'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
-  'Lorem ipsum',
-  'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-  'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-  'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-]
+// const text = [
+//   'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
+//   'Lorem ipsum',
+//   'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+//   'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+//   'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+// ]
