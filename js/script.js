@@ -57,24 +57,6 @@ const text = [
   'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ]
 
-// const testo = document.createElement('div');
-// console.log(testo)
-
-// testo.className = 'testo'
-
-// console.log(testo)
-
-// testo.innerHTML= '<h2>titolo</h2> <tr> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, accusamus.</p>'
-
-// console.log(testo)
-
-// const active = document.getElementsByClassName('active');
-
-// $('.active').append(testo)
-
-// console.log(active)
-
-
 
 
 
@@ -95,23 +77,7 @@ prev.addEventListener('click', function(){
   minibox[contatore].classList.add('miniactive');
   box[contatore].classList.add('active');
 
-  const testo = document.createElement('div');
-  console.log(testo)
-
-  testo.className = 'testo'
-
-  console.log(testo)
-
-  testo.innerHTML= '<h2>titolo</h2> <tr> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, accusamus.</p>'
-
-  console.log(testo)
-
-  box[contatore].append(testo)
-
-  console.log(contatore)
-
 })
-
 
 next.addEventListener('click', function(){
 
@@ -131,52 +97,15 @@ next.addEventListener('click', function(){
 })
 
 
+for (i=0; i< title.length; i++){
 
-// immagini centrali***********************************
+  const testo = document.createElement('div');
 
+    testo.className = 'testo'
 
+    testo.innerHTML= `<h2> ${title[i]} </h2> <tr> 
+    <p> ${text[i]} </p>`
 
-// console.log(images)
-// console.log(images[1])
-// console.log(images[images.length-1])
+    box[i].append(testo)
 
-
-// const slide = document.querySelector('.slide')
-
-
-// for (i=0; i < images.length; i++){
-  
-  
-//   const box = document.createElement('div');
-//   box.className = 'box'
-
-//   if (i === 0){
-//     box.classList.add('active');
-//   }
-
-//   box.innerHTML= '<img src="${images[i]}" alt="">'
-
-//   slide.append(box)
-  
-//   console.log(box)
-// }
-
-
-
-
-
-// const title = [
-//   'Svezia',
-//   'Svizzera',
-//   'Gran Bretagna',
-//   'Germania',
-//   'Paradise'
-// ]
-
-// const text = [
-//   'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
-//   'Lorem ipsum',
-//   'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-//   'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-//   'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-// ]
+}
