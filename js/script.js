@@ -9,8 +9,14 @@
 */
 
 
+// immagini laterali*************************************
+
 const minibox = document.getElementsByClassName('minibox')
 console.log(minibox)
+
+const box = document.getElementsByClassName('box');
+console.log(box)
+
 
 let contatore = 0
 console.log(minibox[contatore])
@@ -23,14 +29,17 @@ const next = document.querySelector('.next')
 prev.addEventListener('click', function(){
 
   minibox[contatore].classList.remove('miniactive');
+  box[contatore].classList.remove('active')
 
   contatore = contatore - 1
 
   if (contatore < 0){
     contatore = minibox.length -1
+    contatore = box.length -1
   }
 
   minibox[contatore].classList.add('miniactive');
+  box[contatore].classList.add('active');
 
   console.log(contatore)
 })
@@ -39,6 +48,7 @@ prev.addEventListener('click', function(){
 next.addEventListener('click', function(){
 
   minibox[contatore].classList.remove('miniactive');
+  box[contatore].classList.remove('active');
 
   contatore = contatore + 1
 
@@ -47,24 +57,51 @@ next.addEventListener('click', function(){
   }
 
   minibox[contatore].classList.add('miniactive');
+  box[contatore].classList.add('active')
 
   console.log(contatore)
 })
 
 
 
+// immagini centrali***********************************
 
-
-
-
-
-// const items = [
+// const images = [
 //   'img/01.jpg',
 //   'img/02.jpg',
 //   'img/03.jpg',
 //   'img/04.jpg',
 //   'img/05.jpg'
 // ];
+
+// console.log(images)
+// console.log(images[1])
+// console.log(images[images.length-1])
+
+
+// const slide = document.querySelector('.slide')
+
+
+// for (i=0; i < images.length; i++){
+  
+  
+//   const box = document.createElement('div');
+//   box.className = 'box'
+
+//   if (i === 0){
+//     box.classList.add('active');
+//   }
+
+//   box.innerHTML= '<img src="${images[i]}" alt="">'
+
+//   slide.append(box)
+  
+//   console.log(box)
+// }
+
+
+
+
 
 const title = [
   'Svezia',
